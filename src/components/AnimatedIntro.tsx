@@ -36,16 +36,16 @@ export default function AnimatedIntro() {
 
     return (
         <div className="w-full bg-[#242424] flex items-start justify-center overflow-hidden relative">
-            <div className={`relative w-full max-w-[1920px] px-4 md:px-8 lg:px-12 py-8 md:py-14 text-white flex flex-row items-center justify-between gap-6 ${interFont.className}`}>
+            <div className={`relative w-full max-w-[1920px] pl-4 md:pl-10 lg:pl-[70px] xl:pl-[134px] 2xl:pl-[182px] pr-4 md:pr-12 lg:pr-24 xl:pr-40 2xl:pr-56 py-4 md:py-8 text-white flex flex-row items-center justify-between gap-6 ${interFont.className}`}>
 
                 {/* Left Text side */}
-                <div className="relative z-10 w-full md:w-[60%] lg:w-[55%] flex flex-col gap-4 md:gap-6 tracking-wide">
+                <div className="relative z-10 w-full md:w-[60%] lg:w-[55%] flex flex-col gap-2 md:gap-4 tracking-wide">
                     <BlurText
                         text={text1}
                         delay={wordDelayMs}
                         animateBy="words"
                         direction="top"
-                        className="text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-left leading-[1.2] font-light text-white mb-2 md:mb-4"
+                        className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-left leading-[1.3] font-light text-white mb-1 md:mb-2"
                     />
 
                     <BlurText
@@ -54,7 +54,7 @@ export default function AnimatedIntro() {
                         delay={wordDelayMs}
                         animateBy="words"
                         direction="top"
-                        className="text-xl md:text-2xl lg:text-3xl xl:text-4xl text-left leading-[1.25] font-light text-white/80"
+                        className="text-sm md:text-base lg:text-lg xl:text-xl text-left leading-[1.4] font-light text-white/70"
                     />
                 </div>
 
@@ -64,7 +64,7 @@ export default function AnimatedIntro() {
                         <img
                             src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/qol.svg?t=${Date.now()}`}
                             alt="Qo'l rasmi"
-                            className="w-full max-w-[250px] lg:max-w-[400px] xl:max-w-[550px] h-auto object-contain drop-shadow-2xl opacity-40 lg:opacity-100"
+                            className="w-full max-w-[100px] lg:max-w-[160px] xl:max-w-[220px] h-auto object-contain drop-shadow-2xl opacity-40 lg:opacity-100"
                         />
                     )}
                 </div>
