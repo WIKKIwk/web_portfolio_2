@@ -40,7 +40,7 @@ export default function PortfolioGrid() {
               {/* Orqa fon rangi seli (Shadow Glow) */}
               <div className="absolute -inset-6 md:-inset-10 lg:-inset-12 z-0 opacity-0 group-hover:opacity-100 transition-all duration-[1000ms] ease-out pointer-events-none transform-gpu group-hover:scale-105">
                 <Image
-                  src={`/porta/${num}.png`}
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/porta/${num}.png`}
                   alt=""
                   fill
                   quality={90}
@@ -51,7 +51,7 @@ export default function PortfolioGrid() {
               {/* Asosiy ko'rinuvchi karta oyna */}
               <div className="absolute inset-0 overflow-hidden rounded-sm shadow-[0_0_40px_rgba(0,0,0,0.8)] z-10 border border-white/5 transition-colors duration-[800ms] group-hover:border-white/20 bg-[#000]">
                 <Image
-                  src={`/porta/${num}.png`}
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/porta/${num}.png`}
                   alt={`Portfolio Islom Aka ${num}`}
                   fill
                   quality={90}

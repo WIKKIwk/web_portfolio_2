@@ -80,7 +80,7 @@ export default function Hero() {
                 </a>
             </nav>
             <Image
-                src="/gogo.webp"
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/gogo.webp`}
                 alt="Portrait Background"
                 width={7996}
                 height={4496}
