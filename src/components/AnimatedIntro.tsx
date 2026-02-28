@@ -62,7 +62,7 @@ export default function AnimatedIntro() {
                 <div ref={handRef} className="relative w-1/2 md:w-[40%] lg:w-[35%] flex items-center justify-end pointer-events-none z-0">
                     {showHand && (
                         <img
-                            src={`/qol.svg?t=${Date.now()}`}
+                            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/qol.svg?t=${Date.now()}`}
                             alt="Qo'l rasmi"
                             className="w-full max-w-[250px] lg:max-w-[400px] xl:max-w-[550px] h-auto object-contain drop-shadow-2xl opacity-40 lg:opacity-100"
                         />

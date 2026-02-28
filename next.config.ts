@@ -1,11 +1,17 @@
 import type { NextConfig } from "next";
 
+const isProd = process.env.NODE_ENV === "production";
+const basePath = isProd ? "/web_portfolio_2" : "";
+
 const nextConfig: NextConfig = {
   output: "export",
-  basePath: "/web_portfolio_2",
-  assetPrefix: "/web_portfolio_2",
+  basePath,
+  assetPrefix: basePath,
   images: {
-    unoptimized: true, // GitHub Pages static export uchun kerak
+    unoptimized: true,
+  },
+  env: {
+    NEXT_PUBLIC_BASE_PATH: basePath,
   },
 };
 

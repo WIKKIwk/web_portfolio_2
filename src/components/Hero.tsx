@@ -58,7 +58,7 @@ export default function Hero() {
             {/* Logo in top left corner */}
             <div className="absolute top-8 left-8 md:top-14 md:left-14 lg:top-16 lg:left-16 z-20 mix-blend-difference">
                 <img
-                    src="/logo.svg"
+                    src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo.svg`}
                     alt="Logo"
                     className="w-[120px] md:w-[180px] lg:w-[220px] h-auto object-contain drop-shadow-lg"
                 />
