@@ -99,6 +99,182 @@ export default function Home() {
 
         {/* Portfolio Rasmlari Gird'i */}
         <PortfolioGrid />
+
+        {/* Hizmatlar haqida ma'lumot qismi */}
+        <div className={`w-full max-w-7xl mx-auto py-16 md:py-24 px-6 md:px-12 flex flex-col gap-6 text-gray-300 ${poppinsFont.className}`}>
+          <div className="flex flex-col gap-8 w-full max-w-4xl">
+            <FadeInItem delay={0.1}>
+              <div className="flex flex-col gap-2">
+                <BlurText
+                  text="- Individuallashgan qadoqlash dizayni"
+                  delay={20}
+                  animateBy="words"
+                  direction="top"
+                  className="text-xl md:text-2xl text-white font-medium inline-block"
+                />
+                <BlurText
+                  text="Brendingiz xarakteriga mos, 100% noyob va professional qadoqlash dizaynlarini ishlab chiqamiz. Minimalistik, premium yoki o'ziga xos kreativ yechimlar - tanlov sizniki."
+                  delay={10}
+                  animateBy="words"
+                  direction="top"
+                  className="text-lg md:text-xl font-light leading-relaxed pl-5 inline-block"
+                />
+              </div>
+            </FadeInItem>
+
+            <FadeInItem delay={0.2}>
+              <div className="flex flex-col gap-2">
+                <BlurText
+                  text="- Mahsulotni sotadigan vizual identitet"
+                  delay={20}
+                  animateBy="words"
+                  direction="top"
+                  className="text-xl md:text-2xl text-white font-medium inline-block"
+                />
+                <BlurText
+                  text="Mahsuloting polkada ajralib turishi uchun ko'zga yoqimli, savdo konversiyasini oshiradigan dizayn konsepsiyalarini yaratamiz."
+                  delay={10}
+                  animateBy="words"
+                  direction="top"
+                  className="text-lg md:text-xl font-light leading-relaxed pl-5 inline-block"
+                />
+              </div>
+            </FadeInItem>
+
+            <FadeInItem delay={0.3}>
+              <div className="flex flex-col gap-2">
+                <BlurText
+                  text="- Premium & luxury packaging"
+                  delay={20}
+                  animateBy="words"
+                  direction="top"
+                  className="text-xl md:text-2xl text-white font-medium inline-block"
+                />
+                <BlurText
+                  text="Gold-foil, emboss, deboss, mat/soft-touch kabi premium effektlarga mos ekskluziv dizaynlar."
+                  delay={10}
+                  animateBy="words"
+                  direction="top"
+                  className="text-lg md:text-xl font-light leading-relaxed pl-5 inline-block"
+                />
+              </div>
+            </FadeInItem>
+
+            <FadeInItem delay={0.4}>
+              <div className="flex flex-col gap-2">
+                <BlurText
+                  text="- Tezkor dizayn xizmati"
+                  delay={20}
+                  animateBy="words"
+                  direction="top"
+                  className="text-xl md:text-2xl text-white font-medium inline-block"
+                />
+                <BlurText
+                  text="Shoshilinch loyihalar uchun 24-48 soatda sifatli dizayn tayyorlab berish xizmati."
+                  delay={10}
+                  animateBy="words"
+                  direction="top"
+                  className="text-lg md:text-xl font-light leading-relaxed pl-5 inline-block"
+                />
+              </div>
+            </FadeInItem>
+
+            <FadeInItem delay={0.5}>
+              <div className="flex flex-col gap-2">
+                <BlurText
+                  text="- Qadoqlash strukturasi va mockup tayyorlash"
+                  delay={20}
+                  animateBy="words"
+                  direction="top"
+                  className="text-xl md:text-2xl text-white font-medium inline-block"
+                />
+                <BlurText
+                  text="Na faqat dizayn, balki qadoq shakli, o'lcham variantlari hamda fotorealistik 3D mockup yaratish."
+                  delay={10}
+                  animateBy="words"
+                  direction="top"
+                  className="text-lg md:text-xl font-light leading-relaxed pl-5 inline-block"
+                />
+              </div>
+            </FadeInItem>
+
+            <FadeInItem delay={0.6}>
+              <div className="flex flex-col gap-2">
+                <BlurText
+                  text="- Brend stiliga mos kompleks qadoqlash"
+                  delay={20}
+                  animateBy="words"
+                  direction="top"
+                  className="text-xl md:text-2xl text-white font-medium inline-block"
+                />
+                <BlurText
+                  text="Mahsulot liniyangiz uchun yagona uslubda- quti, paket, yorliq, stiker, sleeve va boshqalar bo'yicha to'liq set."
+                  delay={10}
+                  animateBy="words"
+                  direction="top"
+                  className="text-lg md:text-xl font-light leading-relaxed pl-5 inline-block"
+                />
+              </div>
+            </FadeInItem>
+
+            <FadeInItem delay={0.7}>
+              <div className="flex flex-col gap-2">
+                <BlurText
+                  text="- Eksport bozorlariga mos dizayn"
+                  delay={20}
+                  animateBy="words"
+                  direction="top"
+                  className="text-xl md:text-2xl text-white font-medium inline-block"
+                />
+                <BlurText
+                  text="Xalqaro talablar, til variantlari va eksport standartlariga moslashtirilgan dizaynlar."
+                  delay={10}
+                  animateBy="words"
+                  direction="top"
+                  className="text-lg md:text-xl font-light leading-relaxed pl-5 inline-block"
+                />
+              </div>
+            </FadeInItem>
+
+            <FadeInItem delay={0.8}>
+              <div className="flex flex-col gap-2">
+                <BlurText
+                  text="- Qadoqlashni yangilash (rebranding)"
+                  delay={20}
+                  animateBy="words"
+                  direction="top"
+                  className="text-xl md:text-2xl text-white font-medium inline-block"
+                />
+                <BlurText
+                  text="Mavjud qadoqlashingizni modern uslubda qayta ishlash va sotuv samaradorligini oshirish."
+                  delay={10}
+                  animateBy="words"
+                  direction="top"
+                  className="text-lg md:text-xl font-light leading-relaxed pl-5 inline-block"
+                />
+              </div>
+            </FadeInItem>
+
+            <FadeInItem delay={0.9}>
+              <div className="flex flex-col gap-2">
+                <BlurText
+                  text="- Raqobatchilar tahlili + yechim"
+                  delay={20}
+                  animateBy="words"
+                  direction="top"
+                  className="text-xl md:text-2xl text-white font-medium inline-block"
+                />
+                <BlurText
+                  text="Bozordagi raqiblar dizaynini tahlil qilib, sizni ajratib turadigan yuqori samarali dizayn konsepsiyasi."
+                  delay={10}
+                  animateBy="words"
+                  direction="top"
+                  className="text-lg md:text-xl font-light leading-relaxed pl-5 inline-block"
+                />
+              </div>
+            </FadeInItem>
+          </div>
+        </div>
       </div>
 
       {/* Butun ekran pastki qismiga o'ziga Gradual Blur animatsiyasi */}
