@@ -93,26 +93,6 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* Yengil gorizontal chiziq */}
-              <div className="w-full max-w-[90vw] md:max-w-full h-px bg-white/10 my-10 md:my-14 border-none"></div>
-
-              <div className="flex flex-col md:flex-row items-start gap-8 md:gap-16">
-                <a href="https://t.me/lslombek" target="_blank" className="inline-block relative overflow-hidden group border border-white/30 hover:border-white transition-colors duration-500 rounded-sm">
-                  <span className="relative z-10 w-full flex items-center justify-center px-10 py-4 tracking-[0.2em] font-light text-xs md:text-sm text-white group-hover:text-black transition-colors duration-700">
-                    TELEGRAM ORQALI
-                  </span>
-                  <span className="absolute bottom-0 left-0 w-full h-0 bg-white transition-all duration-[600ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:h-full z-0"></span>
-                </a>
-
-                <span className="hidden md:block w-px h-12 bg-white/20"></span>
-
-                <a href="tel:+998949024261" className="inline-block relative overflow-hidden group border border-white/30 hover:border-white transition-colors duration-500 rounded-sm">
-                  <span className="relative z-10 w-full flex items-center justify-center px-10 py-4 tracking-[0.2em] font-light text-xs md:text-sm text-white group-hover:text-black transition-colors duration-700">
-                    +998 94 902 42 61
-                  </span>
-                  <span className="absolute bottom-0 left-0 w-full h-0 bg-white transition-all duration-[600ms] ease-[cubic-bezier(0.25,0.46,0.45,0.94)] group-hover:h-full z-0"></span>
-                </a>
-              </div>
             </div>
           </FadeInItem>
         </div>
