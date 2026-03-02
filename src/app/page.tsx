@@ -318,9 +318,9 @@ export default function Home() {
           <Image
             src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo.svg`}
             alt="Logo"
-            width={100}
-            height={50}
-            className="w-20 md:w-28 lg:w-36 opacity-80"
+            width={160}
+            height={80}
+            className="w-28 md:w-40 lg:w-48 opacity-80"
           />
         </div>
 
