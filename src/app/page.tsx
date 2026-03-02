@@ -311,27 +311,27 @@ export default function Home() {
       </div>
 
       {/* Eng pastki qism - Kulrang konda (Footer) */}
-      <div className="w-full h-[200px] md:h-[250px] lg:h-[300px] bg-[#1a1a1a] relative z-20 overflow-hidden flex items-center justify-center">
+      <div className="w-full h-[140px] md:h-[180px] lg:h-[200px] bg-[#1a1a1a] relative z-20 overflow-hidden flex items-center justify-center">
 
         {/* Chap tomon: Logo (Absolute holatda) */}
         <div className="absolute left-6 md:left-16 lg:left-24 top-1/2 transform -translate-y-1/2 z-10 hidden md:flex">
           <Image
             src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo.svg`}
             alt="Logo"
-            width={120}
-            height={60}
-            className="w-24 md:w-32 lg:w-40 opacity-80"
+            width={100}
+            height={50}
+            className="w-20 md:w-28 lg:w-36 opacity-80"
           />
         </div>
 
         {/* O'rta qism: Kontaktlar (Aniq o'rtada pozitsiyalanadi) */}
-        <div className="flex flex-col items-center justify-center gap-4 md:gap-6 z-10 relative">
-          <div className="flex flex-col items-center gap-1 md:gap-2 text-white font-medium text-xl md:text-3xl lg:text-5xl tracking-wide font-sans">
+        <div className="flex flex-col items-center justify-center gap-3 md:gap-4 z-10 relative">
+          <div className="flex flex-col items-center gap-1 text-white font-medium text-lg md:text-2xl lg:text-4xl tracking-wide font-sans leading-tight">
             <a href="tel:+998913514261" className="hover:text-gray-300 transition-colors inline-block">+99891 351-42-61</a>
             <a href="tel:+998949024261" className="hover:text-gray-300 transition-colors inline-block">+99894 902-42-61</a>
           </div>
 
-          <div className="flex items-center justify-center gap-6 md:gap-12 text-[#888888] font-medium text-xs md:text-base lg:text-lg tracking-[0.05em] mt-2">
+          <div className="flex items-center justify-center gap-6 md:gap-10 text-[#888888] font-medium text-[10px] md:text-sm lg:text-base tracking-[0.05em] mt-1 md:mt-2">
             <a href="https://t.me/lslombek" target="_blank" className="hover:text-white transition-colors">Telegram</a>
             <a href="#" target="_blank" className="hover:text-white transition-colors">Instagram</a>
             <a href="#" target="_blank" className="hover:text-white transition-colors">Behance</a>
@@ -339,13 +339,13 @@ export default function Home() {
         </div>
 
         {/* O'ng tomon: Imzo / Qadoq (yarmigacha tiqilgan) */}
-        <div className="absolute -bottom-16 -right-16 md:-bottom-24 md:-right-24 lg:-bottom-32 lg:-right-32 opacity-20 pointer-events-none z-0 transform -rotate-12">
+        <div className="absolute -bottom-10 -right-10 md:-bottom-20 md:-right-20 lg:-bottom-28 lg:-right-28 opacity-20 pointer-events-none z-0 transform -rotate-12">
           <Image
             src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/voydod.svg`}
             alt="Imzo"
-            width={400}
-            height={400}
-            className="w-[250px] md:w-[400px] lg:w-[600px] object-contain"
+            width={300}
+            height={300}
+            className="w-[200px] md:w-[300px] lg:w-[450px] object-contain"
           />
         </div>
       </div>
