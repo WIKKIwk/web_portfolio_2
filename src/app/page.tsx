@@ -311,7 +311,7 @@ export default function Home() {
       </div>
 
       {/* Eng pastki qism - Kulrang konda (Footer) */}
-      <div id="boglanish" className="w-full h-[140px] md:h-[180px] lg:h-[200px] bg-[#1a1a1a] relative z-20 flex items-center justify-center overflow-hidden">
+      <div id="boglanish" className="w-full h-[140px] md:h-[180px] lg:h-[200px] bg-[#1a1a1a] relative z-20 flex items-center justify-center">
 
         {/* Chap tomon: Logo (Absolute holatda) */}
         <div className="absolute left-6 md:left-16 lg:left-24 top-1/2 transform -translate-y-1/2 z-10 hidden md:flex">
@@ -338,15 +338,17 @@ export default function Home() {
           </div>
         </div>
 
-        {/* O'ng tomon: Rasm (divdan chiqib ketadi) */}
-        <div className="absolute -bottom-10 -right-20 md:-bottom-20 md:-right-32 lg:-bottom-28 lg:-right-48 opacity-20 pointer-events-none z-0 transform -rotate-12">
-          <Image
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/qol.svg`}
-            alt="Qo'l"
-            width={700}
-            height={700}
-            className="w-[300px] md:w-[500px] lg:w-[800px] xl:w-[900px] object-contain"
-          />
+        {/* O'ng tomon: Rasm (yuqoridan chiqib turishi uchun maxsus clip qilingan wrapper) */}
+        <div className="absolute bottom-0 right-0 w-full h-[1000px] overflow-hidden pointer-events-none z-0">
+          <div className="absolute -bottom-10 -right-20 md:-bottom-20 md:-right-32 lg:-bottom-28 lg:-right-48 opacity-20 transform -rotate-12">
+            <Image
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/qol.svg`}
+              alt="Qo'l"
+              width={700}
+              height={700}
+              className="w-[300px] md:w-[500px] lg:w-[800px] xl:w-[900px] object-contain"
+            />
+          </div>
         </div>
       </div>
     </main>
