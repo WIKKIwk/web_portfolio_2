@@ -104,7 +104,7 @@ export default function Home() {
       {/* Takliflar + Footer wrapper: SVG shu ikki qismni qamrab oladi */}
       <div className="relative w-full">
         {/* Chap tomondagi vertikal chiziq — takliflardan logoga qadar */}
-        <div className="absolute left-[1%] md:left-[3%] lg:left-[4%] top-[100px] md:top-[140px] lg:top-[160px] bottom-[140px] md:bottom-[180px] lg:bottom-[200px] w-[120px] md:w-[180px] lg:w-[220px] opacity-20 pointer-events-none z-[5] hidden md:block">
+        <div className="absolute left-[1%] md:left-[3%] lg:left-[4%] top-[100px] md:top-[140px] lg:top-[160px] bottom-[140px] md:bottom-[180px] lg:bottom-[200px] w-[120px] md:w-[180px] lg:w-[220px] opacity-60 pointer-events-none z-[5] hidden md:block">
           <Image
             src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/Безымянный-3.svg`}
             alt="Vertical Lines"
