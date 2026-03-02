@@ -101,7 +101,7 @@ export default function Home() {
         <PortfolioGrid />
 
         {/* Hizmatlar/Takliflar haqida ma'lumot qismi */}
-        <div className={`w-full max-w-7xl mx-auto py-16 md:py-24 px-6 md:px-12 flex flex-col gap-12 text-gray-300 ${poppinsFont.className}`}>
+        <div id="takliflar" className={`w-full max-w-7xl mx-auto py-16 md:py-24 px-6 md:px-12 flex flex-col gap-12 text-gray-300 ${poppinsFont.className}`}>
           {/* Sarlavha: Takliflar */}
           <div className="w-full text-left md:text-center md:pb-4 border-b border-white/5 pb-6">
             <FadeInItem delay={0.1}>
@@ -311,7 +311,7 @@ export default function Home() {
       </div>
 
       {/* Eng pastki qism - Kulrang konda (Footer) */}
-      <div className="w-full h-[140px] md:h-[180px] lg:h-[200px] bg-[#1a1a1a] relative z-20 flex items-center justify-center">
+      <div id="boglanish" className="w-full h-[140px] md:h-[180px] lg:h-[200px] bg-[#1a1a1a] relative z-20 flex items-center justify-center">
 
         {/* Chap tomon: Logo (Absolute holatda) */}
         <div className="absolute left-6 md:left-16 lg:left-24 top-1/2 transform -translate-y-1/2 z-10 hidden md:flex">
