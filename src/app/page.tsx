@@ -311,27 +311,27 @@ export default function Home() {
       </div>
 
       {/* Eng pastki qism - Kulrang konda (Footer) */}
-      <div className="w-full min-h-[300px] bg-[#111111] relative z-20 overflow-hidden flex flex-col md:flex-row items-center justify-center md:justify-between px-6 md:px-16 lg:px-24">
+      <div className="w-full h-[300px] md:h-[400px] bg-[#1a1a1a] relative z-20 overflow-hidden flex items-center justify-center">
 
-        {/* Chap tomon: Logo */}
-        <div className="flex-shrink-0 mb-10 md:mb-0 z-10 w-full md:w-auto flex justify-center md:justify-start">
+        {/* Chap tomon: Logo (Absolute holatda) */}
+        <div className="absolute left-6 md:left-16 lg:left-24 top-1/2 transform -translate-y-1/2 z-10 hidden md:flex">
           <Image
             src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo.svg`}
             alt="Logo"
             width={120}
             height={60}
-            className="w-32 md:w-40 opacity-80"
+            className="w-24 md:w-32 lg:w-40 opacity-80"
           />
         </div>
 
-        {/* O'rta qism: Kontaktlar */}
-        <div className="flex flex-col items-center justify-center gap-6 z-10">
-          <div className="flex flex-col items-center gap-2 text-white font-medium text-2xl md:text-3xl lg:text-4xl tracking-wider">
-            <a href="tel:+998913514261" className="hover:text-gray-300 transition-colors">+99891 351-42-61</a>
-            <a href="tel:+998949024261" className="hover:text-gray-300 transition-colors">+99894 902-42-61</a>
+        {/* O'rta qism: Kontaktlar (Aniq o'rtada pozitsiyalanadi) */}
+        <div className="flex flex-col items-center justify-center gap-6 z-10 relative">
+          <div className="flex flex-col items-center gap-2 text-white font-medium text-2xl md:text-3xl lg:text-5xl tracking-wide font-sans">
+            <a href="tel:+998913514261" className="hover:text-gray-300 transition-colors inline-block">+99891 351-42-61</a>
+            <a href="tel:+998949024261" className="hover:text-gray-300 transition-colors inline-block">+99894 902-42-61</a>
           </div>
 
-          <div className="flex items-center justify-center gap-8 md:gap-12 text-gray-400 text-sm md:text-base tracking-[0.1em]">
+          <div className="flex items-center justify-center gap-8 md:gap-12 text-[#888888] font-medium text-sm md:text-base lg:text-lg tracking-[0.05em] mt-2">
             <a href="https://t.me/lslombek" target="_blank" className="hover:text-white transition-colors">Telegram</a>
             <a href="#" target="_blank" className="hover:text-white transition-colors">Instagram</a>
             <a href="#" target="_blank" className="hover:text-white transition-colors">Behance</a>
