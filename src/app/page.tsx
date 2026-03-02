@@ -38,28 +38,7 @@ export default function Home() {
           />
         </div>
 
-        {/* Matnli qism rasmlardan oldin */}
-        <div className="w-full max-w-[1920px] px-6 pb-4 pt-32 md:pt-40 flex flex-col items-center justify-center text-center relative z-10">
-          <FadeInItem delay={0.2}>
-            <h2 className="text-3xl md:text-5xl lg:text-6xl font-serif font-light tracking-[0.1em] text-white mb-6 md:mb-8">
-              <ShinyText
-                text={
-                  <>
-                    LOYIHANGIZNI BIRGALIKDA <br className="hidden md:block" /> YARATAMIZ
-                  </>
-                }
-                disabled={false}
-                speed={3}
-                className="shiny-text"
-              />
-            </h2>
-            <p className="text-gray-400 font-light text-xs md:text-sm tracking-[0.2em] max-w-2xl mx-auto mb-8 md:mb-12 uppercase leading-relaxed">
-              Brend qadriyatini ko'zni qamashtiruvchi qadoqlarga ko'chiramiz. <br className="hidden sm:block" />
-              Sizning dadil g'oyangiz hamda mening dizayndagi 6 yillik tajribam bilan, <br className="hidden sm:block" />
-              premium va mutlaq betakror natijaga erishamiz.
-            </p>
-          </FadeInItem>
-        </div>
+        {/* Matnli qism rasmlardan oldin olib tashlandi */}
 
         {/* Portfolio Rasmlari Gird'i */}
         <PortfolioGrid />
