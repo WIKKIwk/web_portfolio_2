@@ -339,10 +339,10 @@ export default function Home() {
         </div>
 
         {/* O'ng tomon: Rasm */}
-        <div className="absolute -bottom-10 -right-10 md:-bottom-20 md:-right-20 lg:-bottom-28 lg:-right-28 opacity-20 pointer-events-none z-0 transform -rotate-12">
+        <div className="absolute -bottom-4 -right-10 md:-bottom-8 md:-right-20 lg:-bottom-12 lg:-right-28 opacity-20 pointer-events-none z-0 transform -rotate-12">
           <Image
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/voydod.svg`}
-            alt="Imzo"
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/qol.svg`}
+            alt="Qo'l"
             width={300}
             height={300}
             className="w-[200px] md:w-[300px] lg:w-[450px] object-contain"
