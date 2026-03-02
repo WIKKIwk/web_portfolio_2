@@ -310,9 +310,44 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Eng pastki qism - Kulrang konda */}
-      <div className="w-full min-h-[300px] bg-[#111111] relative z-20 border-t border-white/5 flex flex-col items-center justify-center">
-        {/* Kontent shu yerg qo'shiladi */}
+      {/* Eng pastki qism - Kulrang konda (Footer) */}
+      <div className="w-full min-h-[300px] bg-[#111111] relative z-20 overflow-hidden flex flex-col md:flex-row items-center justify-center md:justify-between px-6 md:px-16 lg:px-24">
+
+        {/* Chap tomon: Logo */}
+        <div className="flex-shrink-0 mb-10 md:mb-0 z-10 w-full md:w-auto flex justify-center md:justify-start">
+          <Image
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo.svg`}
+            alt="Logo"
+            width={120}
+            height={60}
+            className="w-32 md:w-40 opacity-80"
+          />
+        </div>
+
+        {/* O'rta qism: Kontaktlar */}
+        <div className="flex flex-col items-center justify-center gap-6 z-10">
+          <div className="flex flex-col items-center gap-2 text-white font-medium text-2xl md:text-3xl lg:text-4xl tracking-wider">
+            <a href="tel:+998913514261" className="hover:text-gray-300 transition-colors">+99891 351-42-61</a>
+            <a href="tel:+998949024261" className="hover:text-gray-300 transition-colors">+99894 902-42-61</a>
+          </div>
+
+          <div className="flex items-center justify-center gap-8 md:gap-12 text-gray-400 text-sm md:text-base tracking-[0.1em]">
+            <a href="https://t.me/lslombek" target="_blank" className="hover:text-white transition-colors">Telegram</a>
+            <a href="#" target="_blank" className="hover:text-white transition-colors">Instagram</a>
+            <a href="#" target="_blank" className="hover:text-white transition-colors">Behance</a>
+          </div>
+        </div>
+
+        {/* O'ng tomon: Imzo / Qadoq (yarmigacha tiqilgan) */}
+        <div className="absolute -bottom-16 -right-16 md:-bottom-24 md:-right-24 lg:-bottom-32 lg:-right-32 opacity-20 pointer-events-none z-0 transform -rotate-12">
+          <Image
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/voydod.svg`}
+            alt="Imzo"
+            width={400}
+            height={400}
+            className="w-[300px] md:w-[400px] lg:w-[600px] object-contain"
+          />
+        </div>
       </div>
 
       {/* Butun ekran pastki qismiga o'ziga Gradual Blur animatsiyasi */}
