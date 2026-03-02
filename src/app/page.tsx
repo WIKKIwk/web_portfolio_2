@@ -310,6 +310,11 @@ export default function Home() {
         </div>
       </div>
 
+      {/* Eng pastki qism - Kulrang konda */}
+      <div className="w-full min-h-[300px] bg-[#111111] relative z-20 border-t border-white/5 flex flex-col items-center justify-center">
+        {/* Kontent shu yerg qo'shiladi */}
+      </div>
+
       {/* Butun ekran pastki qismiga o'ziga Gradual Blur animatsiyasi */}
       <GradualBlur
         preset="bottom"
