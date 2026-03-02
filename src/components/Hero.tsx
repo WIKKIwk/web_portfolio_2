@@ -60,7 +60,7 @@ export default function Hero() {
                 <img
                     src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo.svg`}
                     alt="Logo"
-                    className="w-[120px] md:w-[180px] lg:w-[220px] h-auto object-contain drop-shadow-lg"
+                    className="w-[80px] md:w-[120px] lg:w-[160px] h-auto object-contain drop-shadow-lg"
                 />
             </div>
 
