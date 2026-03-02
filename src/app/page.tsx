@@ -101,15 +101,15 @@ export default function Home() {
         <PortfolioGrid />
 
         {/* Hizmatlar/Takliflar haqida ma'lumot qismi */}
-        <div id="takliflar" className={`relative w-full max-w-7xl mx-auto py-16 md:py-24 px-6 md:px-12 flex flex-col gap-12 text-gray-300 ${poppinsFont.className} overflow-hidden`}>
+        <div id="takliflar" className={`relative w-full max-w-7xl mx-auto py-16 md:py-24 px-6 md:px-12 flex flex-col gap-12 text-gray-300 ${poppinsFont.className}`}>
 
-          {/* Chap tomondagi vertikal chiziq (Безымянный-3.svg) */}
-          <div className="absolute -left-20 md:-left-32 lg:-left-48 top-24 md:top-32 bottom-10 w-[200px] md:w-[300px] lg:w-[450px] opacity-20 pointer-events-none z-0 hidden md:block">
+          {/* Chap tomondagi vertikal chiziq (Безымянный-3.svg) — fixed left edge */}
+          <div className="fixed left-0 top-0 bottom-0 w-[60px] md:w-[100px] lg:w-[130px] opacity-20 pointer-events-none z-[5] hidden md:block">
             <Image
               src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/Безымянный-3.svg`}
               alt="Vertical Lines"
               fill
-              className="object-cover object-left-top scale-x-125"
+              className="object-cover object-left-top"
             />
           </div>
           {/* Sarlavha: Takliflar */}
