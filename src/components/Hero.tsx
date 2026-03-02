@@ -1,13 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { Roboto } from "next/font/google";
+import { Poppins } from "next/font/google";
 import BlurText from "@/components/BlurText";
 import ShinyText from "@/components/ShinyText";
 import LightRays from "@/components/LightRays";
 import { useState, useEffect } from "react";
 
-const robotoFont = Roboto({ subsets: ['latin', 'cyrillic'], weight: ['300', '400', '500', '700'] });
+const poppinsFont = Poppins({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
 
 export default function Hero() {
     const shineDurationMs = 2500; // Har bir yaltirash 2.5 sekund
@@ -108,7 +108,7 @@ export default function Hero() {
             */}
 
             {/* Overlay Text */}
-            <div className={`absolute inset-0 flex items-center justify-end pr-6 md:pr-12 lg:pr-[14px] xl:pr-[65px] pt-16 md:pt-24 lg:pt-32 z-10 ${robotoFont.className}`}>
+            <div className={`absolute inset-0 flex items-center justify-end pr-6 md:pr-12 lg:pr-[14px] xl:pr-[65px] pt-16 md:pt-24 lg:pt-32 z-10 ${poppinsFont.className}`}>
                 <div className="flex flex-col items-start gap-1">
                     <BlurText
                         text="Dizayn orqali"

@@ -1,9 +1,9 @@
 "use client";
 import { useEffect, useRef, useState } from "react";
 import BlurText from "@/components/BlurText";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const interFont = Inter({ subsets: ['latin', 'cyrillic'] });
+const poppinsFont = Poppins({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
 
 export default function AnimatedIntro() {
     const wordDelayMs = 10; // yanada darrov chiqib kelishi uchun 10ms
@@ -36,7 +36,7 @@ export default function AnimatedIntro() {
 
     return (
         <div className="w-full bg-[#242424] flex items-start justify-center overflow-hidden relative">
-            <div className={`relative w-full max-w-[1920px] pl-4 md:pl-10 lg:pl-[70px] xl:pl-[134px] 2xl:pl-[182px] pr-4 md:pr-12 lg:pr-24 xl:pr-40 2xl:pr-56 py-4 md:py-8 text-white flex flex-row items-center justify-between gap-6 ${interFont.className}`}>
+            <div className={`relative w-full max-w-[1920px] pl-4 md:pl-10 lg:pl-[70px] xl:pl-[134px] 2xl:pl-[182px] pr-4 md:pr-12 lg:pr-24 xl:pr-40 2xl:pr-56 py-4 md:py-8 text-white flex flex-row items-center justify-between gap-6 ${poppinsFont.className}`}>
 
                 {/* Left Text side */}
                 <div className="relative z-10 w-full md:w-[60%] lg:w-[55%] flex flex-col gap-2 md:gap-4 tracking-wide">

@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import DisableDevTools from "@/components/DisableDevTools";
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin", "cyrillic"],
+const poppins = Poppins({
+  weight: ['300', '400', '500', '600', '700'],
+  variable: "--font-poppins",
+  subsets: ["latin"], // Poppins usually only supports latin and devanagari officially
 });
 
 export const metadata: Metadata = {
@@ -20,12 +21,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} antialiased font-sans`}
-      >
+      <body className={`${poppins.variable} antialiased font-sans`}>
         <DisableDevTools />
         {children}
       </body>
-    </html>
+    </html >
   );
 }

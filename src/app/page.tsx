@@ -8,9 +8,9 @@ import BlurText from "@/components/BlurText";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import Image from "next/image";
-import { Inter } from "next/font/google";
+import { Poppins } from "next/font/google";
 
-const interFont = Inter({ subsets: ['latin', 'cyrillic'] });
+const poppinsFont = Poppins({ subsets: ['latin'], weight: ['300', '400', '500', '600', '700'] });
 
 export default function Home() {
   return (
@@ -70,7 +70,7 @@ export default function Home() {
             <div className="w-full flex flex-col items-start w-full max-w-7xl">
               <div className="w-full flex flex-col xl:flex-row justify-between items-start xl:items-center gap-16 xl:gap-32 w-full">
                 {/* Chap tomon: 3 ta qatorli gap */}
-                <div className={`text-gray-200 font-light text-2xl md:text-3xl lg:text-4xl leading-[1.3] md:leading-[1.4] lg:leading-[1.4] flex flex-col gap-4 md:gap-6 mb-16 xl:mb-0 max-w-3xl ${interFont.className}`}>
+                <div className={`text-gray-200 font-light text-2xl md:text-3xl lg:text-4xl leading-[1.3] md:leading-[1.4] lg:leading-[1.4] flex flex-col gap-4 md:gap-6 mb-16 xl:mb-0 max-w-3xl ${poppinsFont.className}`}>
                   <div className="w-full relative">
                     <BlurText
                       text="Har bir qadoq oddiy mahsulot emas, balki brend hikoyasining bir qismi."
