@@ -101,9 +101,19 @@ export default function Home() {
         <PortfolioGrid />
 
         {/* Hizmatlar/Takliflar haqida ma'lumot qismi */}
-        <div id="takliflar" className={`w-full max-w-7xl mx-auto py-16 md:py-24 px-6 md:px-12 flex flex-col gap-12 text-gray-300 ${poppinsFont.className}`}>
+        <div id="takliflar" className={`relative w-full max-w-7xl mx-auto py-16 md:py-24 px-6 md:px-12 flex flex-col gap-12 text-gray-300 ${poppinsFont.className} overflow-hidden`}>
+
+          {/* Chap tomondagi vertikal chiziq (Безымянный-3.svg) */}
+          <div className="absolute -left-20 md:-left-32 lg:-left-48 top-24 md:top-32 bottom-10 w-[200px] md:w-[300px] lg:w-[450px] opacity-20 pointer-events-none z-0 hidden md:block">
+            <Image
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/Безымянный-3.svg`}
+              alt="Vertical Lines"
+              fill
+              className="object-cover object-left-top scale-x-125"
+            />
+          </div>
           {/* Sarlavha: Takliflar */}
-          <div className="w-full text-left md:text-center md:pb-4 border-b border-white/5 pb-6">
+          <div className="w-full text-right md:pb-4 border-b border-white/5 pb-6 relative z-10">
             <FadeInItem delay={0.1}>
               <h2 className="text-3xl md:text-5xl font-serif font-light tracking-[0.1em] text-white">
                 <ShinyText
@@ -116,7 +126,7 @@ export default function Home() {
             </FadeInItem>
           </div>
 
-          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16 relative z-10 w-full pl-0 md:pl-20">
             {/* Chap tomon: Matnlar */}
             <div className="flex flex-col gap-8 w-full lg:w-[60%] xl:w-[65%]">
               <FadeInItem delay={0.1}>
