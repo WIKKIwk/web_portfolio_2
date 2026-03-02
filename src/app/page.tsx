@@ -14,7 +14,7 @@ const poppinsFont = Poppins({ subsets: ['latin'], weight: ['300', '400', '500', 
 
 export default function Home() {
   return (
-    <main className="relative min-h-screen bg-black text-white selection:bg-white/30 flex flex-col items-center overflow-hidden">
+    <main className="relative min-h-screen bg-black text-white selection:bg-white/30 flex flex-col items-center">
       <div id="asoschi" className="w-full">
         <Hero />
         <AnimatedIntro />
@@ -311,7 +311,7 @@ export default function Home() {
       </div>
 
       {/* Eng pastki qism - Kulrang konda (Footer) */}
-      <div id="boglanish" className="w-full h-[140px] md:h-[180px] lg:h-[200px] bg-[#1a1a1a] relative z-20 flex items-center justify-center">
+      <div id="boglanish" className="w-full h-[140px] md:h-[180px] lg:h-[200px] bg-[#1a1a1a] relative z-20 flex items-center justify-center overflow-hidden">
 
         {/* Chap tomon: Logo (Absolute holatda) */}
         <div className="absolute left-6 md:left-16 lg:left-24 top-1/2 transform -translate-y-1/2 z-10 hidden md:flex">
