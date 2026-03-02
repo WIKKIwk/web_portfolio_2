@@ -338,7 +338,7 @@ export default function Home() {
           </div>
         </div>
 
-        {/* O'ng tomon: Imzo / Qadoq (yarmigacha tiqilgan) */}
+        {/* O'ng tomon: Rasm */}
         <div className="absolute -bottom-10 -right-10 md:-bottom-20 md:-right-20 lg:-bottom-28 lg:-right-28 opacity-20 pointer-events-none z-0 transform -rotate-12">
           <Image
             src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/voydod.svg`}
@@ -349,18 +349,6 @@ export default function Home() {
           />
         </div>
       </div>
-
-      {/* Butun ekran pastki qismiga o'ziga Gradual Blur animatsiyasi */}
-      <GradualBlur
-        preset="bottom"
-        target="page"
-        exponential={true}
-        strength={1}
-        divCount={10}
-        opacity={1}
-        height="10rem"
-        className="z-50 pointer-events-none"
-      />
     </main>
   );
 }
