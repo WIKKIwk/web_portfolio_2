@@ -101,8 +101,9 @@ export default function Home() {
         <PortfolioGrid />
 
         {/* Hizmatlar haqida ma'lumot qismi */}
-        <div className={`w-full max-w-7xl mx-auto py-16 md:py-24 px-6 md:px-12 flex flex-col gap-6 text-gray-300 ${poppinsFont.className}`}>
-          <div className="flex flex-col gap-8 w-full max-w-4xl">
+        <div className={`w-full max-w-7xl mx-auto py-16 md:py-24 px-6 md:px-12 flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16 text-gray-300 ${poppinsFont.className}`}>
+          {/* Chap tomon: Matnlar */}
+          <div className="flex flex-col gap-8 w-full lg:w-[60%] xl:w-[65%]">
             <FadeInItem delay={0.1}>
               <div className="flex flex-col gap-2">
                 <BlurText
@@ -270,6 +271,22 @@ export default function Home() {
                   animateBy="words"
                   direction="top"
                   className="text-lg md:text-xl font-light leading-relaxed pl-5 inline-block"
+                />
+              </div>
+            </FadeInItem>
+          </div>
+
+          {/* O'ng tomon: Rasm */}
+          <div className="w-full lg:w-[40%] xl:w-[35%] flex items-start justify-center lg:sticky lg:top-40 relative">
+            <FadeInItem delay={0.4}>
+              <div className="w-full flex justify-center lg:justify-end">
+                <Image
+                  src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/Pasted image.png`}
+                  alt="Qadoqlash Ustasi"
+                  title="Qadoqchi"
+                  width={500}
+                  height={500}
+                  className="w-full max-w-[150px] md:max-w-[180px] lg:max-w-[200px] xl:max-w-[230px] h-auto object-contain drop-shadow-2xl"
                 />
               </div>
             </FadeInItem>
