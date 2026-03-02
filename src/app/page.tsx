@@ -99,19 +99,22 @@ export default function Home() {
 
         {/* Portfolio Rasmlari Gird'i */}
         <PortfolioGrid />
+      </div>
+
+      {/* Takliflar + Footer wrapper: SVG shu ikki qismni qamrab oladi */}
+      <div className="relative w-full">
+        {/* Chap tomondagi vertikal chiziq — takliflardan logoga qadar */}
+        <div className="absolute left-[1%] md:left-[3%] lg:left-[4%] top-0 bottom-[140px] md:bottom-[180px] lg:bottom-[200px] w-[120px] md:w-[180px] lg:w-[220px] opacity-20 pointer-events-none z-[5] hidden md:block">
+          <Image
+            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/Безымянный-3.svg`}
+            alt="Vertical Lines"
+            fill
+            className="object-cover object-left-top"
+          />
+        </div>
 
         {/* Hizmatlar/Takliflar haqida ma'lumot qismi */}
         <div id="takliflar" className={`relative w-full max-w-7xl mx-auto py-16 md:py-24 px-6 md:px-12 flex flex-col gap-12 text-gray-300 ${poppinsFont.className}`}>
-
-          {/* Chap tomondagi vertikal chiziq (Безымянный-3.svg) */}
-          <div className="fixed left-[3%] md:left-[5%] lg:left-[7%] top-0 bottom-0 w-[120px] md:w-[180px] lg:w-[220px] opacity-20 pointer-events-none z-[5] hidden md:block">
-            <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/Безымянный-3.svg`}
-              alt="Vertical Lines"
-              fill
-              className="object-cover object-left-top"
-            />
-          </div>
           {/* Sarlavha: Takliflar */}
           <div className="w-full text-right md:pb-4 border-b border-white/5 pb-6 relative z-10">
             <FadeInItem delay={0.1}>
@@ -318,46 +321,46 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </div>
 
-      {/* Eng pastki qism - Kulrang konda (Footer) */}
-      <div id="boglanish" className="w-full h-[140px] md:h-[180px] lg:h-[200px] bg-[#1a1a1a] relative z-20 flex items-center justify-center">
+        {/* Eng pastki qism - Kulrang konda (Footer) */}
+        <div id="boglanish" className="w-full h-[140px] md:h-[180px] lg:h-[200px] bg-[#1a1a1a] relative z-20 flex items-center justify-center">
 
-        {/* Chap tomon: Logo (Absolute holatda) */}
-        <div className="absolute left-6 md:left-16 lg:left-24 top-1/2 transform -translate-y-1/2 z-10 hidden md:flex">
-          <Image
-            src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo.svg`}
-            alt="Logo"
-            width={160}
-            height={80}
-            className="w-28 md:w-40 lg:w-48 opacity-80"
-          />
-        </div>
-
-        {/* O'rta qism: Kontaktlar (Aniq o'rtada pozitsiyalanadi) */}
-        <div className="flex flex-col items-center justify-center gap-3 md:gap-4 z-10 relative">
-          <div className="flex flex-col items-center gap-1 text-white font-medium text-lg md:text-2xl lg:text-4xl tracking-wide font-sans leading-tight">
-            <a href="tel:+998913514261" className="hover:text-gray-300 transition-colors inline-block">+99891 351-42-61</a>
-            <a href="tel:+998949024261" className="hover:text-gray-300 transition-colors inline-block">+99894 902-42-61</a>
-          </div>
-
-          <div className="flex items-center justify-center gap-6 md:gap-10 text-[#888888] font-medium text-[10px] md:text-sm lg:text-base tracking-[0.05em] mt-1 md:mt-2">
-            <a href="https://t.me/lslombek" target="_blank" className="hover:text-white transition-colors">Telegram</a>
-            <a href="#" target="_blank" className="hover:text-white transition-colors">Instagram</a>
-            <a href="#" target="_blank" className="hover:text-white transition-colors">Behance</a>
-          </div>
-        </div>
-
-        {/* O'ng tomon: Rasm (yuqoridan chiqib turishi uchun maxsus clip qilingan wrapper) */}
-        <div className="absolute bottom-0 right-0 w-full h-[1000px] overflow-hidden pointer-events-none z-0">
-          <div className="absolute -bottom-10 -right-20 md:-bottom-20 md:-right-32 lg:-bottom-28 lg:-right-48 opacity-100 transform -rotate-12">
+          {/* Chap tomon: Logo (Absolute holatda) */}
+          <div className="absolute left-6 md:left-16 lg:left-24 top-1/2 transform -translate-y-1/2 z-10 hidden md:flex">
             <Image
-              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/qol.svg`}
-              alt="Qo'l"
-              width={700}
-              height={700}
-              className="w-[300px] md:w-[500px] lg:w-[800px] xl:w-[900px] object-contain drop-shadow-md"
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo.svg`}
+              alt="Logo"
+              width={160}
+              height={80}
+              className="w-28 md:w-40 lg:w-48 opacity-80"
             />
+          </div>
+
+          {/* O'rta qism: Kontaktlar (Aniq o'rtada pozitsiyalanadi) */}
+          <div className="flex flex-col items-center justify-center gap-3 md:gap-4 z-10 relative">
+            <div className="flex flex-col items-center gap-1 text-white font-medium text-lg md:text-2xl lg:text-4xl tracking-wide font-sans leading-tight">
+              <a href="tel:+998913514261" className="hover:text-gray-300 transition-colors inline-block">+99891 351-42-61</a>
+              <a href="tel:+998949024261" className="hover:text-gray-300 transition-colors inline-block">+99894 902-42-61</a>
+            </div>
+
+            <div className="flex items-center justify-center gap-6 md:gap-10 text-[#888888] font-medium text-[10px] md:text-sm lg:text-base tracking-[0.05em] mt-1 md:mt-2">
+              <a href="https://t.me/lslombek" target="_blank" className="hover:text-white transition-colors">Telegram</a>
+              <a href="#" target="_blank" className="hover:text-white transition-colors">Instagram</a>
+              <a href="#" target="_blank" className="hover:text-white transition-colors">Behance</a>
+            </div>
+          </div>
+
+          {/* O'ng tomon: Rasm (yuqoridan chiqib turishi uchun maxsus clip qilingan wrapper) */}
+          <div className="absolute bottom-0 right-0 w-full h-[1000px] overflow-hidden pointer-events-none z-0">
+            <div className="absolute -bottom-10 -right-20 md:-bottom-20 md:-right-32 lg:-bottom-28 lg:-right-48 opacity-100 transform -rotate-12">
+              <Image
+                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/qol.svg`}
+                alt="Qo'l"
+                width={700}
+                height={700}
+                className="w-[300px] md:w-[500px] lg:w-[800px] xl:w-[900px] object-contain drop-shadow-md"
+              />
+            </div>
           </div>
         </div>
       </div>
