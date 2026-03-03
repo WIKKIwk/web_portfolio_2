@@ -76,19 +76,19 @@ export default function Home() {
                 </div>
 
                 {/* O'ng tomon: Katta Statistika */}
-                <div className="flex flex-col items-start xl:items-end xl:text-right font-sans shrink-0 border-l-0 xl:border-l border-white/10 pl-0 xl:pl-16 pb-8 xl:pb-0">
-                  <div className="flex flex-col mb-10 xl:mb-16">
-                    <span className="text-4xl md:text-5xl lg:text-6xl text-white font-medium tracking-wider mb-2 flex items-center justify-start xl:justify-end">
+                <div className={`flex flex-col items-center shrink-0 border-l-0 xl:border-l border-white/10 pl-0 xl:pl-16 pb-8 xl:pb-0 ${poppinsFont.className}`}>
+                  <div className="flex flex-col items-center text-center mb-10 xl:mb-16">
+                    <span className="text-4xl md:text-5xl lg:text-6xl text-white font-medium tracking-wider mb-2 flex items-center justify-center">
                       <AnimatedCounter targetValue={100} fontSize={60} places={[100, 10, 1]} fontWeight="500" />
                       <span className="ml-1 md:ml-2">+</span>
                     </span>
-                    <span className="text-xs md:text-sm text-gray-500 tracking-[0.3em] uppercase">Muvaffaqiyatli Loyihalar</span>
+                    <span className={`text-xs md:text-sm text-gray-500 tracking-[0.3em] uppercase ${poppinsFont.className}`}>Muvaffaqiyatli Loyihalar</span>
                   </div>
-                  <div className="flex flex-col">
-                    <span className="text-4xl md:text-5xl lg:text-6xl text-white font-medium tracking-wider mb-2 flex items-center justify-start xl:justify-end">
+                  <div className="flex flex-col items-center text-center">
+                    <span className="text-4xl md:text-5xl lg:text-6xl text-white font-medium tracking-wider mb-2 flex items-center justify-center">
                       <AnimatedCounter targetValue={6} fontSize={60} places={[1]} fontWeight="500" />
                     </span>
-                    <span className="text-xs md:text-sm text-gray-500 tracking-[0.3em] uppercase">Yillik Amaliy Tajriba</span>
+                    <span className={`text-xs md:text-sm text-gray-500 tracking-[0.3em] uppercase ${poppinsFont.className}`}>Yillik Amaliy Tajriba</span>
                   </div>
                 </div>
               </div>
