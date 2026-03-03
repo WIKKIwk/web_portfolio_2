@@ -7,6 +7,7 @@ const CurvedLoop = ({
   speed = 2,
   className,
   curveAmount = 400,
+  pathY = 40,
   direction = 'left',
   interactive = true
 }) => {
@@ -25,7 +26,7 @@ const CurvedLoop = ({
 
   const uid = useId();
   const pathId = `curve-${uid}`;
-  const pathD = `M-100,40 Q500,${40 + curveAmount} 1540,40`;
+  const pathD = `M-100,${pathY} Q500,${pathY + curveAmount} 1540,${pathY}`;
 
   const dragRef = useRef(false);
   const lastXRef = useRef(0);
