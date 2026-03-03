@@ -30,7 +30,7 @@ export default function Home() {
           }}
         >
           <CurvedLoop
-            marqueeText="BESPOKE PACKAGING ✦ REFINED AESTHETICS ✦ PRECISION CRAFTSMANSHIP ✦ TIMELESS LUXURY ✦ CURATED FOR DISTINCTION ✦ "
+            marqueeText="REBRANDING ✦ QADOQ DIZAYN ✦ POLIGRAFIK DIZAYN ✦ INDUVIDUAL YONDASHUV ✦ BOZOR TAHLILI ✦ "
             speed={1.5}
             curveAmount={0}
             pathY={85}
