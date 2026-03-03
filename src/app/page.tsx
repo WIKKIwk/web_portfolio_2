@@ -116,7 +116,7 @@ export default function Home() {
         {/* Hizmatlar/Takliflar haqida ma'lumot qismi */}
         <div id="takliflar" className={`relative w-full max-w-7xl mx-auto py-16 md:py-24 px-6 md:px-12 flex flex-col gap-12 text-gray-300 ${poppinsFont.className}`}>
           {/* Sarlavha: Takliflar */}
-          <div className="w-full text-right md:pb-4 border-b border-white/5 pb-6 relative z-10">
+          <div className="w-full text-left pl-0 md:pl-20 md:pb-4 border-b border-white/5 pb-6 relative z-10">
             <FadeInItem delay={0.1}>
               <h2 className="text-3xl md:text-5xl font-serif font-light tracking-[0.1em] text-white">
                 <ShinyText
