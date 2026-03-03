@@ -77,17 +77,17 @@ export default function Home() {
                 {/* O'ng tomon: Katta Statistika */}
                 <div className={`flex flex-col items-center shrink-0 border-l-0 xl:border-l border-white/10 pl-0 xl:pl-16 pb-8 xl:pb-0 ${poppinsFont.className}`}>
                   <div className="flex flex-col items-center text-center mb-10 xl:mb-16">
-                    <span className="text-4xl md:text-5xl lg:text-6xl text-white font-medium tracking-wider mb-2 flex items-center justify-center">
-                      <AnimatedCounter targetValue={100} fontSize={60} places={[100, 10, 1]} fontWeight="500" />
+                    <span className="text-4xl md:text-5xl lg:text-6xl text-white font-bold tracking-wider mb-2 flex items-center justify-center">
+                      <AnimatedCounter targetValue={100} fontSize={60} places={[100, 10, 1]} fontWeight="700" />
                       <span className="ml-1 md:ml-2">+</span>
                     </span>
-                    <span className={`text-xs md:text-sm text-gray-500 tracking-[0.3em] uppercase ${poppinsFont.className}`}>Muvaffaqiyatli Loyihalar</span>
+                    <span className={`text-xs md:text-sm text-gray-500 tracking-[0.2em] ${poppinsFont.className}`}>Muvaffaqiyatli loyihalar</span>
                   </div>
                   <div className="flex flex-col items-center text-center">
-                    <span className="text-4xl md:text-5xl lg:text-6xl text-white font-medium tracking-wider mb-2 flex items-center justify-center">
-                      <AnimatedCounter targetValue={6} fontSize={60} places={[1]} fontWeight="500" />
+                    <span className="text-4xl md:text-5xl lg:text-6xl text-white font-bold tracking-wider mb-2 flex items-center justify-center">
+                      <AnimatedCounter targetValue={6} fontSize={60} places={[1]} fontWeight="700" />
                     </span>
-                    <span className={`text-xs md:text-sm text-gray-500 tracking-[0.3em] uppercase ${poppinsFont.className}`}>Yillik Amaliy Tajriba</span>
+                    <span className={`text-xs md:text-sm text-gray-500 tracking-[0.2em] ${poppinsFont.className}`}>Yillik amaliy tajriba</span>
                   </div>
                 </div>
               </div>
@@ -117,7 +117,7 @@ export default function Home() {
           {/* Sarlavha: Takliflar */}
           <div className="w-full text-left pl-0 md:pl-20 md:pb-4 border-b border-white/5 pb-6 relative z-10">
             <FadeInItem delay={0.1}>
-              <h2 className="text-3xl md:text-5xl font-light tracking-[0.1em] text-white">
+              <h2 className="text-3xl md:text-5xl font-semibold tracking-[0.1em] text-white">
                 <ShinyText
                   text="TAKLIFLAR"
                   disabled={false}
