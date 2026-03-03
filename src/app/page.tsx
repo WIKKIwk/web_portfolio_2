@@ -40,7 +40,7 @@ export default function Home() {
         {/* Matnli qism rasmlardan oldin olib tashlandi */}
 
         {/* Bog'lanish qismi (Portfolio rasmlari oldiga ko'chirildi) */}
-        <div id="boglanish" className="w-full max-w-[1920px] relative z-10 pt-8 md:pt-12 pb-20 px-6 md:px-12 lg:px-24 flex flex-col items-start justify-start text-left border-t border-white/5 mt-0">
+        <div className="w-full max-w-[1920px] relative z-10 pt-8 md:pt-12 pb-20 px-6 md:px-12 lg:px-24 flex flex-col items-start justify-start text-left border-t border-white/5 mt-0">
           <FadeInItem delay={0.2}>
             <div className="w-full flex flex-col items-start w-full max-w-7xl">
               <div className="w-full flex flex-col xl:flex-row justify-between items-start xl:items-center gap-16 xl:gap-32 w-full">
