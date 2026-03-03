@@ -32,7 +32,7 @@ export default function Home() {
           <CurvedLoop
             marqueeText="BESPOKE PACKAGING ✦ REFINED AESTHETICS ✦ PRECISION CRAFTSMANSHIP ✦ TIMELESS LUXURY ✦ CURATED FOR DISTINCTION ✦ "
             speed={1.5}
-            curveAmount={150}
+            curveAmount={0}
             className="text-2xl md:text-3xl lg:text-4xl font-serif font-medium tracking-[0.15em] fill-gray-200"
           />
         </div>
