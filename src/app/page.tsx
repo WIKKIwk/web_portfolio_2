@@ -118,7 +118,7 @@ export default function Home() {
           {/* Sarlavha: Takliflar */}
           <div className="w-full text-left pl-0 md:pl-20 md:pb-4 border-b border-white/5 pb-6 relative z-10">
             <FadeInItem delay={0.1}>
-              <h2 className="text-3xl md:text-5xl font-serif font-light tracking-[0.1em] text-white">
+              <h2 className="text-3xl md:text-5xl font-light tracking-[0.1em] text-white">
                 <ShinyText
                   text="TAKLIFLAR"
                   disabled={false}
