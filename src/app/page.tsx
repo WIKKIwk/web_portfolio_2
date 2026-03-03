@@ -23,7 +23,6 @@ export default function Home() {
       <div className="relative w-full bg-black min-h-[80vh] md:min-h-[100vh] flex flex-col items-center justify-start overflow-hidden pt-0 md:pt-4">
         {/* Yuqori qismdagi CurvedLoop */}
         <div
-          id="takliflar"
           className="w-full relative h-[120px] md:h-[200px] pointer-events-auto -mt-8 md:-mt-12"
           style={{
             maskImage: 'linear-gradient(to right, transparent, black 15%, black 85%, transparent)',
