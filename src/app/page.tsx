@@ -326,7 +326,7 @@ export default function Home() {
         <div id="boglanish" className="w-full h-[140px] md:h-[180px] lg:h-[200px] bg-[#1a1a1a] relative z-20 flex items-center justify-center">
 
           {/* Chap tomon: Logo (Absolute holatda) */}
-          <div className="absolute left-32 md:left-48 lg:left-64 top-1/2 transform -translate-y-1/2 z-10 hidden md:flex">
+          <div className="absolute left-[20%] md:left-[25%] lg:left-[28%] top-1/2 transform -translate-y-1/2 z-10 hidden md:flex">
             <Image
               src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/logo.svg`}
               alt="Logo"
