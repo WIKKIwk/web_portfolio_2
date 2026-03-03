@@ -33,7 +33,7 @@ export default function Home() {
             marqueeText="REBRANDING ✦ QADOQ DIZAYN ✦ POLIGRAFIK DIZAYN ✦ INDUVIDUAL YONDASHUV ✦ BOZOR TAHLILI ✦ "
             speed={1.5}
             curveAmount={0}
-            pathY={85}
+            pathY={93}
             className="text-2xl md:text-3xl lg:text-4xl font-serif font-medium tracking-[0.15em] fill-gray-200"
           />
         </div>
