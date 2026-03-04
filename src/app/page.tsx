@@ -349,18 +349,18 @@ export default function Home() {
               <a href="#" target="_blank" className="hover:text-white transition-colors">Behance</a>
             </div>
           </div>
+        </div>
 
-          {/* O'ng tomon: Rasm (yuqoridan chiqib turishi uchun maxsus clip qilingan wrapper) */}
-          <div className="absolute bottom-0 right-0 w-full h-[1000px] overflow-hidden pointer-events-none z-20">
-            <div className="absolute -bottom-10 -right-20 md:-bottom-20 md:-right-32 lg:-bottom-28 lg:-right-48 opacity-100 transform -rotate-12">
-              <Image
-                src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/qol.svg`}
-                alt="Qo'l"
-                width={700}
-                height={700}
-                className="w-[300px] md:w-[500px] lg:w-[800px] xl:w-[900px] object-contain drop-shadow-md"
-              />
-            </div>
+        {/* Imzo — hamma narsadan ustida (wrapper darajasida) */}
+        <div className="absolute bottom-0 right-0 w-full h-[1000px] overflow-hidden pointer-events-none z-[9999]">
+          <div className="absolute -bottom-10 -right-20 md:-bottom-20 md:-right-32 lg:-bottom-28 lg:-right-48 opacity-100 transform -rotate-12">
+            <Image
+              src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/qol.svg`}
+              alt="Qo'l"
+              width={700}
+              height={700}
+              className="w-[300px] md:w-[500px] lg:w-[800px] xl:w-[900px] object-contain drop-shadow-md"
+            />
           </div>
         </div>
       </div>
