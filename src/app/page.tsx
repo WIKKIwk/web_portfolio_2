@@ -351,7 +351,7 @@ export default function Home() {
           </div>
 
           {/* O'ng tomon: Rasm (yuqoridan chiqib turishi uchun maxsus clip qilingan wrapper) */}
-          <div className="absolute bottom-0 right-0 w-full h-[1000px] overflow-hidden pointer-events-none z-0">
+          <div className="absolute bottom-0 right-0 w-full h-[1000px] overflow-hidden pointer-events-none z-20">
             <div className="absolute -bottom-10 -right-20 md:-bottom-20 md:-right-32 lg:-bottom-28 lg:-right-48 opacity-100 transform -rotate-12">
               <Image
                 src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/qol.svg`}
