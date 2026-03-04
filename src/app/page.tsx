@@ -359,7 +359,7 @@ export default function Home() {
               alt="Qo'l"
               width={700}
               height={700}
-              className="w-[300px] md:w-[500px] lg:w-[800px] xl:w-[900px] object-contain drop-shadow-md"
+              className="w-[230px] md:w-[380px] lg:w-[620px] xl:w-[700px] object-contain drop-shadow-md"
             />
           </div>
         </div>
