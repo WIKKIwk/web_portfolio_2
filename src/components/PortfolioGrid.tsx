@@ -13,7 +13,8 @@ export default function PortfolioGrid() {
     // @ts-ignore
     const projImages = data[`project-${num}`] || [];
     // Asosiy rasm bilan qolganini qo'shib array qilamiz
-    const allImages = [`/porta/${num}.webp`, ...projImages].map((src: string) => ({ src }));
+    const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
+    const allImages = [`${base}/porta/${num}.webp`, ...projImages.map((s: string) => `${base}${s}`)].map((src: string) => ({ src }));
     setImages(allImages);
     setOpen(true);
     document.body.style.overflow = 'hidden';
