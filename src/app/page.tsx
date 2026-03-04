@@ -116,7 +116,7 @@ export default function Home() {
         {/* Hizmatlar/Takliflar haqida ma'lumot qismi */}
         <div id="takliflar" className={`relative w-full max-w-7xl mx-auto py-16 md:py-24 px-6 md:px-12 flex flex-col gap-12 text-gray-300 ${poppinsFont.className}`}>
           {/* Sarlavha: Takliflar */}
-          <div className="w-full text-left pl-0 md:pl-20 md:pb-4 border-b border-white/5 pb-6 relative z-10">
+          <div className="w-full text-left pl-0 md:pl-32 lg:pl-40 md:pb-4 border-b border-white/5 pb-6 relative z-[35]">
             <FadeInItem delay={0.1}>
               <h2 className="text-3xl md:text-5xl font-semibold tracking-[0.1em] text-white">
                 <ShinyText
@@ -129,7 +129,7 @@ export default function Home() {
             </FadeInItem>
           </div>
 
-          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16 relative z-10 w-full pl-0 md:pl-20">
+          <div className="flex flex-col lg:flex-row items-center lg:items-start gap-12 lg:gap-16 relative z-[35] w-full pl-0 md:pl-32 lg:pl-40">
             {/* Chap tomon: Matnlar */}
             <div className="flex flex-col gap-8 w-full lg:w-[60%] xl:w-[65%]">
               <FadeInItem delay={0.1}>
