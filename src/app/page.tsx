@@ -7,6 +7,7 @@ import ShinyText from "@/components/ShinyText";
 import BlurText from "@/components/BlurText";
 import PortfolioGrid from "@/components/PortfolioGrid";
 import AnimatedCounter from "@/components/AnimatedCounter";
+import LightRays from "@/components/LightRays";
 import Image from "next/image";
 import { Poppins } from "next/font/google";
 
@@ -304,18 +305,31 @@ export default function Home() {
               </FadeInItem>
             </div>
 
-            {/* O'ng tomon: Rasm */}
+            {/* O'ng tomon: Rasm + LightRays */}
             <div className="w-full lg:w-[40%] xl:w-[35%] flex items-start justify-center lg:sticky lg:top-40 relative">
               <FadeInItem delay={0.4}>
-                <div className="w-full flex justify-center lg:justify-end">
+                <div className="relative w-full flex justify-center lg:justify-end">
                   <Image
                     src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/Pasted image.png`}
                     alt="Qadoqlash Ustasi"
                     title="Qadoqchi"
                     width={500}
                     height={500}
-                    className="w-full max-w-[150px] md:max-w-[180px] lg:max-w-[200px] xl:max-w-[230px] h-auto object-contain drop-shadow-2xl"
+                    className="w-full max-w-[150px] md:max-w-[180px] lg:max-w-[200px] xl:max-w-[230px] h-auto object-contain drop-shadow-2xl relative z-10"
                   />
+                  {/* LightRays — rasmning o'ng markazida */}
+                  <div className="absolute top-1/2 -translate-y-1/2 left-[60%] w-[300px] md:w-[400px] lg:w-[500px] h-[400px] md:h-[500px] pointer-events-none z-0">
+                    <LightRays
+                      raysOrigin="left"
+                      raysColor="#ffffff"
+                      raysSpeed={0.6}
+                      lightSpread={0.8}
+                      rayLength={1.5}
+                      fadeDistance={0.8}
+                      followMouse={true}
+                      mouseInfluence={0.08}
+                    />
+                  </div>
                 </div>
               </FadeInItem>
             </div>
