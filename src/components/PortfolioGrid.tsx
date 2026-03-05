@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import Image from "next/image";
 import data from "@/lib/portfolioData.json";
 import FadeInItem from "@/components/FadeInItem";
@@ -8,14 +8,18 @@ import FadeInItem from "@/components/FadeInItem";
 export default function PortfolioGrid() {
   const [open, setOpen] = useState(false);
   const [images, setImages] = useState<{ src: string }[]>([]);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const openLightbox = (num: number) => {
     // @ts-ignore
     const projImages = data[`project-${num}`] || [];
-    // Asosiy rasm bilan qolganini qo'shib array qilamiz
     const base = process.env.NEXT_PUBLIC_BASE_PATH || '';
-    const allImages = [`${base}/porta/${num}.webp`, ...projImages.map((s: string) => `${base}${s}`)].map((src: string) => ({ src }));
+    const allImages = [
+      `${base}/porta/${num}.webp`,
+      ...projImages.map((s: string) => `${base}${s}`)
+    ].map((src: string) => ({ src }));
     setImages(allImages);
+    setCurrentIndex(0);
     setOpen(true);
     document.body.style.overflow = 'hidden';
   };
@@ -25,7 +29,27 @@ export default function PortfolioGrid() {
     document.body.style.overflow = 'auto';
   };
 
-  // Komponent o'chganda (unmount) skrollni tozalash
+  const nextImage = useCallback(() => {
+    setCurrentIndex((prev) => (prev + 1) % images.length);
+  }, [images.length]);
+
+  const prevImage = useCallback(() => {
+    setCurrentIndex((prev) => (prev - 1 + images.length) % images.length);
+  }, [images.length]);
+
+  // Klaviatura boshqaruvi
+  useEffect(() => {
+    if (!open) return;
+    const handleKey = (e: KeyboardEvent) => {
+      if (e.key === 'Escape') nextImage();       // ESC → keyingi
+      if (e.key === 'ArrowRight') nextImage();   // → keyingi
+      if (e.key === 'ArrowLeft') prevImage();    // ← oldingi
+    };
+    window.addEventListener('keydown', handleKey);
+    return () => window.removeEventListener('keydown', handleKey);
+  }, [open, nextImage, prevImage]);
+
+  // Unmount da skrollni tiklash
   useEffect(() => {
     return () => {
       document.body.style.overflow = 'auto';
@@ -34,11 +58,18 @@ export default function PortfolioGrid() {
 
   return (
     <>
-      <div id="portfolio" className="w-full max-w-[1920px] px-6 md:px-12 lg:px-24 pt-4 md:pt-8 pb-12 md:pb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 relative z-10">
+      {/* Portfolio Grid */}
+      <div
+        id="portfolio"
+        className="w-full max-w-[1920px] px-6 md:px-12 lg:px-24 pt-4 md:pt-8 pb-12 md:pb-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12 relative z-10"
+      >
         {[1, 2, 3, 4, 5, 6].map((num) => (
           <FadeInItem key={num} delay={num * 0.1}>
-            <div onClick={() => openLightbox(num)} className="relative aspect-[4/5] w-full group cursor-pointer z-10 hover:z-50 transition-all duration-500">
-              {/* Orqa fon rangi seli (Shadow Glow) */}
+            <div
+              onClick={() => openLightbox(num)}
+              className="relative aspect-[4/5] w-full group cursor-pointer z-10 hover:z-50 transition-all duration-500"
+            >
+              {/* Glow effet */}
               <div className="absolute -inset-6 md:-inset-10 lg:-inset-12 z-0 opacity-0 group-hover:opacity-100 transition-all duration-[1000ms] ease-out pointer-events-none transform-gpu group-hover:scale-105">
                 <Image
                   src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/porta/${num}.webp`}
@@ -48,8 +79,7 @@ export default function PortfolioGrid() {
                   className="object-cover blur-[50px] md:blur-[70px] saturate-200 opacity-80"
                 />
               </div>
-
-              {/* Asosiy ko'rinuvchi karta oyna */}
+              {/* Karta */}
               <div className="absolute inset-0 overflow-hidden rounded-sm shadow-[0_0_40px_rgba(0,0,0,0.8)] z-10 border border-white/5 transition-colors duration-[800ms] group-hover:border-white/20 bg-[#000]">
                 <Image
                   src={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/porta/${num}.webp`}
@@ -65,41 +95,90 @@ export default function PortfolioGrid() {
         ))}
       </div>
 
-      {open && (
+      {/* Lightbox — Slider */}
+      {open && images.length > 0 && (
         <div
           onClick={closeLightbox}
-          className="fixed inset-0 z-[100] flex flex-col items-center justify-start overflow-y-auto bg-black/80 backdrop-blur-xl p-6 md:p-12 transition-opacity duration-300"
+          className="fixed inset-0 z-[100] flex items-center justify-center bg-black/92 backdrop-blur-2xl"
         >
+          {/* Yopish tugmasi */}
           <button
             onClick={closeLightbox}
-            className="fixed top-6 right-6 z-[110] text-gray-400 hover:text-white transition-colors bg-black/50 hover:bg-black/80 p-3 rounded-full border border-white/10"
+            className="fixed top-5 right-5 z-[110] text-gray-400 hover:text-white transition-all duration-200 bg-white/5 hover:bg-white/15 p-3 rounded-full border border-white/10"
+            title="Yopish"
           >
-            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6 md:w-8 md:h-8">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 md:w-6 md:h-6">
               <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
             </svg>
           </button>
 
+          {/* Raqam ko'rsatkichi */}
+          <div className="fixed top-6 left-1/2 -translate-x-1/2 z-[110] text-gray-400 text-xs md:text-sm tracking-[0.3em] font-light select-none">
+            {currentIndex + 1} / {images.length}
+          </div>
+
+          {/* Rasm — asl o'lchamida */}
           <div
             onClick={(e) => e.stopPropagation()}
-            className="w-full max-w-4xl mx-auto mt-8 md:mt-12 mb-24 grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-8 relative z-10 py-12 md:py-20 place-content-center place-items-center"
+            className="relative flex items-center justify-center w-full h-full px-16 md:px-24"
           >
-            {images.map((img, i) => (
-              <FadeInItem key={i} delay={i * 0.1}>
-                <div className="relative aspect-[4/5] w-full overflow-hidden rounded-sm shadow-2xl border border-white/5">
-                  <Image
-                    src={img.src}
-                    alt={`Portfolio Loyiha Rasmi ${i}`}
-                    fill
-                    quality={90}
-                    className="object-cover"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                </div>
-              </FadeInItem>
-            ))}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              key={currentIndex}
+              src={images[currentIndex].src}
+              alt={`Portfolio rasm ${currentIndex + 1}`}
+              style={{
+                maxWidth: '90vw',
+                maxHeight: '85vh',
+                width: 'auto',
+                height: 'auto',
+                objectFit: 'contain',
+                animation: 'fadeIn 0.25s ease',
+              }}
+              className="rounded-sm shadow-[0_0_80px_rgba(0,0,0,0.8)] select-none"
+              draggable={false}
+            />
+          </div>
+
+          {/* Oldingi tugma */}
+          {images.length > 1 && (
+            <button
+              onClick={(e) => { e.stopPropagation(); prevImage(); }}
+              className="fixed left-3 md:left-6 top-1/2 -translate-y-1/2 z-[110] text-gray-400 hover:text-white transition-all duration-200 bg-white/5 hover:bg-white/15 p-3 md:p-4 rounded-full border border-white/10"
+              title="Oldingi"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 md:w-6 md:h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+              </svg>
+            </button>
+          )}
+
+          {/* Keyingi tugma */}
+          {images.length > 1 && (
+            <button
+              onClick={(e) => { e.stopPropagation(); nextImage(); }}
+              className="fixed right-3 md:right-6 top-1/2 -translate-y-1/2 z-[110] text-gray-400 hover:text-white transition-all duration-200 bg-white/5 hover:bg-white/15 p-3 md:p-4 rounded-full border border-white/10"
+              title="Keyingi"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-5 h-5 md:w-6 md:h-6">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+              </svg>
+            </button>
+          )}
+
+          {/* ESC ko'rsatmasi */}
+          <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[110] text-gray-600 text-[10px] md:text-xs tracking-[0.2em] font-light select-none">
+            ESC — keyingi &nbsp;·&nbsp; ← → — o'tkazish &nbsp;·&nbsp; X — yopish
           </div>
         </div>
       )}
+
+      <style jsx global>{`
+        @keyframes fadeIn {
+          from { opacity: 0; transform: scale(0.97); }
+          to   { opacity: 1; transform: scale(1); }
+        }
+      `}</style>
     </>
   );
 }
