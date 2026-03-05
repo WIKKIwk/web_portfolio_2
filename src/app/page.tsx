@@ -116,6 +116,19 @@ export default function Home() {
 
         {/* Hizmatlar/Takliflar haqida ma'lumot qismi */}
         <div id="takliflar" className={`relative w-full max-w-7xl mx-auto py-16 md:py-24 px-6 md:px-12 flex flex-col gap-12 text-gray-300 ${poppinsFont.className}`}>
+          {/* LightRays — o'ng devorga yopishgan, yuqoridan pastgacha */}
+          <div className="absolute top-0 right-0 w-[40%] md:w-[45%] h-full pointer-events-none z-[1] overflow-hidden">
+            <LightRays
+              raysOrigin="right"
+              raysColor="#ffffff"
+              raysSpeed={0.5}
+              lightSpread={1.4}
+              rayLength={2.0}
+              fadeDistance={1.0}
+              followMouse={true}
+              mouseInfluence={0.06}
+            />
+          </div>
           {/* Sarlavha: Takliflar */}
           <div className="w-full text-left pl-0 md:pl-32 lg:pl-40 md:pb-4 border-b border-white/5 pb-6 relative z-[35]">
             <FadeInItem delay={0.1}>
@@ -317,19 +330,6 @@ export default function Home() {
                     height={500}
                     className="w-full max-w-[150px] md:max-w-[180px] lg:max-w-[200px] xl:max-w-[230px] h-auto object-contain drop-shadow-2xl relative z-10"
                   />
-                  {/* LightRays — o'ng devordan chap tomonga */}
-                  <div className="absolute top-1/2 -translate-y-1/2 right-0 w-[300px] md:w-[400px] lg:w-[500px] h-[400px] md:h-[500px] pointer-events-none z-0">
-                    <LightRays
-                      raysOrigin="right"
-                      raysColor="#ffffff"
-                      raysSpeed={0.6}
-                      lightSpread={0.8}
-                      rayLength={1.5}
-                      fadeDistance={0.8}
-                      followMouse={true}
-                      mouseInfluence={0.08}
-                    />
-                  </div>
                 </div>
               </FadeInItem>
             </div>
