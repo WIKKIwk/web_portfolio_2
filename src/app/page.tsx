@@ -351,8 +351,8 @@ export default function Home() {
             />
           </div>
 
-          {/* O'rta qism: Kontaktlar (Aniq o'rtada pozitsiyalanadi) */}
-          <div className="flex flex-col items-center justify-center gap-3 md:gap-4 z-10 relative">
+          {/* O'ng tomon: Kontaktlar */}
+          <div className="flex flex-col items-center justify-center gap-3 md:gap-4 z-10 relative ml-16 md:ml-28 lg:ml-[152px]">
             <div className="flex flex-col items-center gap-1 text-white font-medium text-lg md:text-2xl lg:text-4xl tracking-wide font-sans leading-tight">
               <a href="tel:+998913514261" className="hover:text-gray-300 transition-colors inline-block">+99891 351-42-61</a>
               <a href="tel:+998949024261" className="hover:text-gray-300 transition-colors inline-block">+99894 902-42-61</a>
