@@ -317,10 +317,10 @@ export default function Home() {
                     height={500}
                     className="w-full max-w-[150px] md:max-w-[180px] lg:max-w-[200px] xl:max-w-[230px] h-auto object-contain drop-shadow-2xl relative z-10"
                   />
-                  {/* LightRays — rasmning o'ng markazida */}
-                  <div className="absolute top-1/2 -translate-y-1/2 left-[60%] w-[300px] md:w-[400px] lg:w-[500px] h-[400px] md:h-[500px] pointer-events-none z-0">
+                  {/* LightRays — o'ng devordan chap tomonga */}
+                  <div className="absolute top-1/2 -translate-y-1/2 right-0 w-[300px] md:w-[400px] lg:w-[500px] h-[400px] md:h-[500px] pointer-events-none z-0">
                     <LightRays
-                      raysOrigin="left"
+                      raysOrigin="right"
                       raysColor="#ffffff"
                       raysSpeed={0.6}
                       lightSpread={0.8}
