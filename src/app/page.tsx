@@ -32,7 +32,7 @@ export default function Home() {
         >
           <CurvedLoop
             marqueeText="REBRANDING ✦ QADOQ DIZAYN ✦ POLIGRAFIK DIZAYN ✦ INDUVIDUAL YONDASHUV ✦ BOZOR TAHLILI ✦ "
-            speed={1.5}
+            speed={0.6}
             curveAmount={0}
             pathY={93}
             className="text-2xl md:text-3xl lg:text-4xl font-serif font-medium tracking-[0.15em] fill-gray-200"
@@ -115,14 +115,20 @@ export default function Home() {
         </div>
 
         {/* LightRays — viewport o'ng devorga yopishgan */}
-        <div className="absolute top-0 right-0 w-[35vw] h-full pointer-events-none z-[2]">
+        <div
+          className="absolute top-0 right-0 w-[70vw] h-full pointer-events-none z-[2]"
+          style={{
+            maskImage: 'linear-gradient(to right, transparent 0%, black 30%)',
+            WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 30%)',
+          }}
+        >
           <LightRays
             raysOrigin="right"
             raysColor="#ffffff"
             raysSpeed={0.5}
-            lightSpread={1.5}
-            rayLength={2.0}
-            fadeDistance={1.0}
+            lightSpread={2.2}
+            rayLength={2.5}
+            fadeDistance={1.2}
             followMouse={true}
             mouseInfluence={0.06}
           />
