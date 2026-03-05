@@ -114,21 +114,22 @@ export default function Home() {
           />
         </div>
 
+        {/* LightRays — viewport o'ng devorga yopishgan */}
+        <div className="absolute top-0 right-0 w-[35vw] h-full pointer-events-none z-[2]">
+          <LightRays
+            raysOrigin="right"
+            raysColor="#ffffff"
+            raysSpeed={0.5}
+            lightSpread={1.5}
+            rayLength={2.0}
+            fadeDistance={1.0}
+            followMouse={true}
+            mouseInfluence={0.06}
+          />
+        </div>
+
         {/* Hizmatlar/Takliflar haqida ma'lumot qismi */}
         <div id="takliflar" className={`relative w-full max-w-7xl mx-auto py-16 md:py-24 px-6 md:px-12 flex flex-col gap-12 text-gray-300 ${poppinsFont.className}`}>
-          {/* LightRays — o'ng devorga yopishgan, yuqoridan pastgacha */}
-          <div className="absolute top-0 right-0 w-[40%] md:w-[45%] h-full pointer-events-none z-[1] overflow-hidden">
-            <LightRays
-              raysOrigin="right"
-              raysColor="#ffffff"
-              raysSpeed={0.5}
-              lightSpread={1.4}
-              rayLength={2.0}
-              fadeDistance={1.0}
-              followMouse={true}
-              mouseInfluence={0.06}
-            />
-          </div>
           {/* Sarlavha: Takliflar */}
           <div className="w-full text-left pl-0 md:pl-32 lg:pl-40 md:pb-4 border-b border-white/5 pb-6 relative z-[35]">
             <FadeInItem delay={0.1}>
