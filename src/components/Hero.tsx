@@ -115,7 +115,7 @@ export default function Hero() {
                         delay={50}
                         animateBy="words"
                         direction="top"
-                        className="text-left leading-[1.1] tracking-wide text-gray-300 font-light text-[18px] md:text-[20px] lg:text-[24px] xl:text-[30px] drop-shadow-2xl"
+                        className="text-left leading-[1.1] tracking-wide text-gray-300 font-light text-[20px] md:text-[22px] lg:text-[26px] xl:text-[32px] drop-shadow-2xl"
                     />
                     <BlurText
                         text="qadriyatni qadoqlayman."
@@ -123,7 +123,7 @@ export default function Hero() {
                         delay={50}
                         animateBy="words"
                         direction="top"
-                        className="text-left leading-[1.1] tracking-wide text-white font-semibold text-[22px] md:text-[26px] lg:text-[32px] xl:text-[40px] drop-shadow-2xl"
+                        className="text-left leading-[1.1] tracking-wide text-white font-semibold text-[24px] md:text-[28px] lg:text-[34px] xl:text-[42px] drop-shadow-2xl"
                     />
                 </div>
             </div>
