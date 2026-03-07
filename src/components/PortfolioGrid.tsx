@@ -24,10 +24,10 @@ export default function PortfolioGrid() {
     document.body.style.overflow = 'hidden';
   };
 
-  const closeLightbox = () => {
+  const closeLightbox = useCallback(() => {
     setOpen(false);
     document.body.style.overflow = 'auto';
-  };
+  }, []);
 
   const nextImage = useCallback(() => {
     setCurrentIndex((prev) => (prev + 1) % images.length);
@@ -41,13 +41,15 @@ export default function PortfolioGrid() {
   useEffect(() => {
     if (!open) return;
     const handleKey = (e: KeyboardEvent) => {
-      if (e.key === 'Escape') nextImage();       // ESC → keyingi
-      if (e.key === 'ArrowRight') nextImage();   // → keyingi
-      if (e.key === 'ArrowLeft') prevImage();    // ← oldingi
+      if (e.key === 'Escape' || e.key.toLowerCase() === 'x') {
+        closeLightbox();
+      }
+      if (e.key === 'ArrowRight') nextImage();
+      if (e.key === 'ArrowLeft') prevImage();
     };
     window.addEventListener('keydown', handleKey);
     return () => window.removeEventListener('keydown', handleKey);
-  }, [open, nextImage, prevImage]);
+  }, [open, closeLightbox, nextImage, prevImage]);
 
   // Unmount da skrollni tiklash
   useEffect(() => {
@@ -166,10 +168,6 @@ export default function PortfolioGrid() {
             </button>
           )}
 
-          {/* ESC ko'rsatmasi */}
-          <div className="fixed bottom-6 left-1/2 -translate-x-1/2 z-[110] text-gray-600 text-[10px] md:text-xs tracking-[0.2em] font-light select-none">
-            ESC — keyingi &nbsp;·&nbsp; ← → — o'tkazish &nbsp;·&nbsp; X — yopish
-          </div>
         </div>
       )}
 

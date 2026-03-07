@@ -11,7 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Islom Aka — Qadoqlash Dizayneri",
+  title: "Qadoqdizayn.uz",
   description: "Professional qadoqlash dizayni xizmatlari",
 };
 

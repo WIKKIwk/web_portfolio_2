@@ -326,7 +326,7 @@ export default function Home() {
             </div>
 
             {/* O'ng tomon: Rasm + LightRays */}
-            <div className="w-full lg:w-[40%] xl:w-[35%] flex items-start justify-center lg:sticky lg:top-40 relative">
+            <div className="w-full lg:w-[40%] xl:w-[35%] flex items-start justify-center relative">
               <FadeInItem delay={0.4}>
                 <div className="relative w-full flex justify-center lg:justify-end">
                   <Image
