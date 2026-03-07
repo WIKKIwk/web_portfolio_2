@@ -31,6 +31,8 @@ jobs:
         run: npm ci
 
       - name: Build
+        env:
+          CUSTOM_DOMAIN: qadoqdizayn.uz
         run: npm run build
 
       - name: Upload artifact
